@@ -49,10 +49,11 @@ WCSimDetectorConstruction::WCSimDetectorConstruction(G4int DetConfig,WCSimTuning
   WCSimDetectorConstruction::PMTLogicalVolumes.clear();
   totalNumPMTs = 0;
   WCPMTExposeHeight= 0.;
+  
   //-----------------------------------------------------
   // Set the default WC geometry.  This can be changed later.
   //-----------------------------------------------------
-
+  
   SetSuperKGeometry();
   //SetHyperKGeometry();
 

@@ -405,15 +405,6 @@ public:
   void Set_WCAddGd(G4bool choice){WCAddGd=choice;}
   G4bool Get_WCAddGd(){ return WCAddGd;}
 
-
-  //C. Simpson
-  //Allow the proportion of Gadolinium in the detector to be changed
-  //Defaults to 0.1
-public:
-  void SetGdRatio(G4double choice){GdRatio=choice;};
-  G4double GetGdRatio(){return GdRatio;};
-private:
-  G4double GdRatio=0.001;
 };
 
 #endif
