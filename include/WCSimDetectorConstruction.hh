@@ -395,7 +395,25 @@ private:
   G4double innerradius;
  
   std::vector<WCSimPmtInfo*> fpmts;
-  
+
+  //C. Simpson
+  //Controlling Gd
+  //The bool that controls whether Gd is added during detector definition already existed,
+  // but it had to be hard coded in the detector configs file. Using the messenger allows 
+  // Gd to be turned on and off easily.
+public:
+  void Set_WCAddGd(G4bool choice){WCAddGd=choice;}
+  G4bool Get_WCAddGd(){ return WCAddGd;}
+
+
+  //C. Simpson
+  //Allow the proportion of Gadolinium in the detector to be changed
+  //Defaults to 0.1
+public:
+  void SetGdRatio(G4double choice){GdRatio=choice;};
+  G4double GetGdRatio(){return GdRatio;};
+private:
+  G4double GdRatio=0.001;
 };
 
 #endif

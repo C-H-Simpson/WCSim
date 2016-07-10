@@ -52,8 +52,10 @@ void WCSimDetectorConstruction::ConstructMaterials()
  density = 1.00*g/cm3;
  G4Material* DopedWater
     = new G4Material("Doped Water",density,2);
- DopedWater->AddMaterial(Water,99.9*perCent);
- DopedWater->AddElement(Gd,0.1*perCent);
+ //C. Simpson - want the proportion of Gd to be adjustable by messenger
+ DopedWater->AddMaterial(Water,1-GetGdRatio());//99.9*perCent);
+ DopedWater->AddElement(Gd,GetGdRatio());//0.1*perCent);
+ G4cout << "Gd proportion is set at " << GetGdRatio() << G4endl;
 
  //---Ice 
  
