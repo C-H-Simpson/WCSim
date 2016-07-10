@@ -11,6 +11,11 @@
 # These are fixed geometries for validation
 #/WCSim/WCgeom SuperK
 
+#Turn Gd on (or off). Off by default in most geometries.
+#/WCSim/GdCmd on
+#/WCSim/GdCmd off
+#must call /WCSim/Construct after setting this for it have an effect
+
 # Some other SuperK options:
 #/WCSim/WCgeom SuperK_20inchPMT_20perCent # Note: the actual coverage is 20.27%
 #/WCSim/WCgeom SuperK_20inchBandL_20perCent # Note: the actual coverage is 20.27%
